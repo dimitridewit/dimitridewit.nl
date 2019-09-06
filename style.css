@@ -381,6 +381,16 @@ ul {
 .blue-text {
   color: #268bd2; }
 
+@keyframes bounce {
+  0% {
+    left: 4px;
+    top: 4px; }
+  50% {
+    left: 10px;
+    top: 10px; }
+  100% {
+    left: 4px;
+    top: 4px; } }
 .nightmode-switch {
   align-items: center;
   background-color: #eee8d5;
@@ -426,6 +436,8 @@ ul {
     left: 44px; }
   .nightmode-switch.active .switch-fill {
     left: 46px; }
+  .nightmode-switch.bounce {
+    animation: bounce 1.5s infinite; }
 
 .index h1, .index h2 {
   font-weight: 700;
@@ -463,12 +475,12 @@ ul {
     .index .intro .avatar img {
       display: block;
       width: 100%; }
-    .index .intro .avatar:focus, .index .intro .avatar:active, .index .intro .avatar:hover {
+    .index .intro .avatar:hover {
       cursor: pointer; }
-      .index .intro .avatar:focus .img-wrapper, .index .intro .avatar:active .img-wrapper, .index .intro .avatar:hover .img-wrapper {
-        left: -100px; }
-      .index .intro .avatar:focus .nightmode-switch, .index .intro .avatar:active .nightmode-switch, .index .intro .avatar:hover .nightmode-switch {
-        left: 100px; }
+    .index .intro .avatar.active .img-wrapper {
+      left: -100px; }
+    .index .intro .avatar.active .nightmode-switch {
+      left: 100px; }
 .index .intro-hi {
   position: relative;
   display: block;

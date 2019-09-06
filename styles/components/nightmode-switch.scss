@@ -1,3 +1,20 @@
+@keyframes bounce {
+  0% {
+    left: 4px;
+    top: 4px;
+  }
+
+  50% {
+    left: 10px;
+    top: 10px;
+  }
+
+  100% {
+    left: 4px;
+    top: 4px;
+  }
+}
+
 .nightmode-switch {
   align-items: center;
   background-color: $off-white;
@@ -61,5 +78,9 @@
     .switch-fill {
       left: 46px;
     }
+  }
+
+  &.bounce {
+    animation: bounce 1.5s infinite;
   }
 }

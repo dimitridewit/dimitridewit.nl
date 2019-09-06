@@ -6,9 +6,10 @@
   var switchClicked = false;
   var body = document.body;
 
-
-  function closeSwitch() {
-    avatarNode.classList.remove('active');
+  function removeBounce() {
+    if(switchNode.classList.contains('bounce')) {
+      switchNode.classList.remove('bounce');
+    }
   }
 
   function toggleNightmode() {
@@ -17,15 +18,14 @@
 
   function enableNightmode() {
     body.classList.add('nightmode');
-    closeSwitch();
   };
 
   function disableNightmode() {
     body.classList.remove('nightmode');
   };
 
-  function openSwitch() {
-    avatarNode.classList.add('active');
+  function toggleSwitch() {
+    avatarNode.classList.toggle('active');
   }
 
   switchNode.addEventListener('click', function() {
@@ -34,11 +34,11 @@
     switchNode.classList.toggle('active');
     switchClicked = true;
     toggleNightmode();
-    closeSwitch();
   });
 
   avatarImgNode.addEventListener('click', function() {
-    openSwitch();
+    removeBounce();
+    toggleSwitch();
   });
 
   function checkForNightmode() {
@@ -61,7 +61,7 @@
   function setTimer() {
     setTimeout(function(){
       checkForNightmode();
-    }, 1000000);
+    }, 60000);
   }
 
   checkForNightmode();
