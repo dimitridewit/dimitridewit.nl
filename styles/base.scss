@@ -29,10 +29,11 @@ section {
   }
 
   .right-container {
-    padding: 40px;
+    padding: 20px;
 
     @include desktop {
       align-self: flex-end;
+      padding: 40px;
       width: 50%;
     }
   }

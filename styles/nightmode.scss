@@ -1,15 +1,16 @@
 .nightmode {
+  background-color: $dark-bg;
+
   h1,
   h2  {
     color: $off-white;
   }
 
   .nightmode-switch {
-    // background-color: rgba($off-white, .1);
+    background-color: rgba($off-white, .1);
   }
 
   section {
-    background-color: $dark-bg;
     color: $off-white;
   }
 

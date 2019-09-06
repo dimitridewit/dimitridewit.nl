@@ -1,14 +1,14 @@
 .nightmode-switch {
-  transition: left .25s ease;
+  align-items: center;
   background-color: $off-white;
   border-radius: 500px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 150px;
+  justify-content: center;
   left: 4px;
   position: absolute;
   top: 4px;
+  transition: all .25s ease;
   width: 150px;
   z-index: 1;
 
@@ -18,23 +18,23 @@
   }
 
   .switch-fill {
-    transition: left .25s ease;
     background-color: $off-white;
+    border-radius: 80px;
     display: block;
     height: 32px;
-    width: 32px;
     left: 4px;
-    border-radius: 80px;
     position: relative;
+    transition: left .25s ease;
+    width: 32px;
     z-index: 5;
   }
 
   .switch {
-    display: flex;
-    background-color: $black;
-    border: 4px solid $white;
-    border-radius: 44px;
     align-items: center;
+    background-color: $black;
+    border-radius: 44px;
+    border: 4px solid $white;
+    display: flex;
     height: 44px;
     position: relative;
     width: 88px;

@@ -327,10 +327,11 @@ section {
     section .left-container {
       width: 60%; } }
   section .right-container {
-    padding: 40px; }
+    padding: 20px; }
     @media (min-width: 820px) {
       section .right-container {
         align-self: flex-end;
+        padding: 40px;
         width: 50%; } }
 
 h1 {
@@ -379,16 +380,16 @@ ul {
   color: #268bd2; }
 
 .nightmode-switch {
-  transition: left .25s ease;
+  align-items: center;
   background-color: #eee8d5;
   border-radius: 500px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 150px;
+  justify-content: center;
   left: 4px;
   position: absolute;
   top: 4px;
+  transition: all .25s ease;
   width: 150px;
   z-index: 1; }
   @media (min-width: 820px) {
@@ -396,21 +397,21 @@ ul {
       height: 250px;
       width: 250px; } }
   .nightmode-switch .switch-fill {
-    transition: left .25s ease;
     background-color: #eee8d5;
+    border-radius: 80px;
     display: block;
     height: 32px;
-    width: 32px;
     left: 4px;
-    border-radius: 80px;
     position: relative;
+    transition: left .25s ease;
+    width: 32px;
     z-index: 5; }
   .nightmode-switch .switch {
-    display: flex;
-    background-color: #073642;
-    border: 4px solid #fdf6e3;
-    border-radius: 44px;
     align-items: center;
+    background-color: #073642;
+    border-radius: 44px;
+    border: 4px solid #fdf6e3;
+    display: flex;
     height: 44px;
     position: relative;
     width: 88px;
@@ -427,8 +428,6 @@ ul {
 .index h1, .index h2 {
   font-weight: 700;
   margin: 0; }
-.index section {
-  background-color: #fdf6e3; }
 .index .intro {
   align-items: center; }
   .index .intro .right-container {
@@ -504,18 +503,21 @@ ul {
 .index .contact-title::after {
   content: "Contact"; }
 
-.nightmode h1,
-.nightmode h2 {
-  color: #eee8d5; }
-.nightmode section {
-  background-color: #002b36;
-  color: #eee8d5; }
-.nightmode .hi::after,
-.nightmode .dimitri::after,
-.nightmode .avatar::after,
-.nightmode .me-title::after,
-.nightmode .skills-title::after,
-.nightmode .contact-title::after {
-  opacity: .1; }
+.nightmode {
+  background-color: #002b36; }
+  .nightmode h1,
+  .nightmode h2 {
+    color: #eee8d5; }
+  .nightmode .nightmode-switch {
+    background-color: rgba(238, 232, 213, 0.1); }
+  .nightmode section {
+    color: #eee8d5; }
+  .nightmode .hi::after,
+  .nightmode .dimitri::after,
+  .nightmode .avatar::after,
+  .nightmode .me-title::after,
+  .nightmode .skills-title::after,
+  .nightmode .contact-title::after {
+    opacity: .1; }
 
 /*# sourceMappingURL=style.css.map */
