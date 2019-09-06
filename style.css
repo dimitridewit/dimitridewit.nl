@@ -535,7 +535,8 @@ ul {
   .nightmode h1,
   .nightmode h2 {
     color: #eee8d5; }
-  .nightmode .nightmode-switch {
+  .nightmode .nightmode-switch,
+  .nightmode #switch-trigger {
     background-color: rgba(238, 232, 213, 0.1); }
   .nightmode section {
     color: #eee8d5; }
