@@ -48,8 +48,8 @@
         width: 100%;
       }
 
-      &.active,
-      &:hover {
+      &:active,
+      &:hover, {
         cursor: pointer;
         .img-wrapper {
           left: -100px;

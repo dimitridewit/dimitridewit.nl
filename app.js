@@ -6,22 +6,39 @@
   var switchClicked = false;
   var body = document.body;
 
+
+  function closeSwitch() {
+    avatarNode.classList.remove('active');
+  }
+
   function toggleNightmode() {
     body.classList.toggle('nightmode');
   }
 
-  function enableNightmode() { body.classList.add('nightmode') };
-  function disableNightmode() { body.classList.remove('nightmode') };
+  function enableNightmode() {
+    body.classList.add('nightmode');
+    closeSwitch();
+  };
+
+  function disableNightmode() {
+    body.classList.remove('nightmode');
+  };
+
+  function openSwitch() {
+    avatarNode.classList.add('active');
+  }
 
   switchNode.addEventListener('click', function() {
     console.log('User clicked Nightmode switch...');
+
+    switchNode.classList.toggle('active');
     switchClicked = true;
     toggleNightmode();
-    switchNode.classList.toggle('active');
+    closeSwitch();
   });
 
   avatarImgNode.addEventListener('click', function() {
-    avatarNode.classList.toggle('active');
+    openSwitch();
   });
 
   function checkForNightmode() {
