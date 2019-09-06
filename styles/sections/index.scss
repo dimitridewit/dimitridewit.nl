@@ -6,6 +6,11 @@
 
   .intro {
     align-items: center;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
 
     .right-container {
       align-self: unset;
@@ -17,7 +22,7 @@
       height: 150px;
       width: 150px;
 
-      @include desktop {
+      @include small-mobile {
         height: 250px;
         width: 250px;
       }
@@ -32,15 +37,11 @@
         width: 150px;
         z-index: 2;
 
-        @include desktop {
+        @include small-mobile {
           height: 250px;
           width: 250px;
         }
-
-
-
       }
-
 
       img {
         display: block;
@@ -112,5 +113,14 @@
 
   .contact-title::after {
     content: "Contact";
+  }
+
+  .contact {
+    .mail-link,
+    .call-link {
+      &:hover {
+        color: $blue;
+      }
+    }
   }
 }

@@ -1,11 +1,14 @@
 html, body {
-  background-color: $white;
   box-sizing: border-box;
 }
 
 * {
   box-sizing: inherit;
   font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: $white;
 }
 
 section {
@@ -15,7 +18,7 @@ section {
   padding: 10vh 24px;
   color: $black;
 
-  @include desktop {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     min-height: 90vh;
@@ -23,7 +26,7 @@ section {
   }
 
   .left-container {
-    @include desktop {
+    @include tablet {
       width: 60%;
     }
   }
@@ -31,7 +34,7 @@ section {
   .right-container {
     padding: 20px;
 
-    @include desktop {
+    @include tablet {
       align-self: flex-end;
       padding: 40px;
       width: 50%;

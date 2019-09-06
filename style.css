@@ -304,12 +304,14 @@ template {
   display: none; }
 
 html, body {
-  background-color: #fdf6e3;
   box-sizing: border-box; }
 
 * {
   box-sizing: inherit;
   font-family: 'Quicksand', sans-serif; }
+
+body {
+  background-color: #fdf6e3; }
 
 section {
   transition: background-color .25s ease;
@@ -317,18 +319,18 @@ section {
   max-width: 1440px;
   padding: 10vh 24px;
   color: #073642; }
-  @media (min-width: 820px) {
+  @media (min-width: 720px) {
     section {
       display: flex;
       justify-content: space-between;
       min-height: 90vh;
       padding: 15vh 24px; } }
-  @media (min-width: 820px) {
+  @media (min-width: 720px) {
     section .left-container {
       width: 60%; } }
   section .right-container {
     padding: 20px; }
-    @media (min-width: 820px) {
+    @media (min-width: 720px) {
       section .right-container {
         align-self: flex-end;
         padding: 40px;
@@ -336,13 +338,13 @@ section {
 
 h1 {
   font-size: 80px; }
-  @media (min-width: 820px) {
+  @media (min-width: 1024px) {
     h1 {
       font-size: 176px; } }
 
 h2 {
   font-size: 64px; }
-  @media (min-width: 820px) {
+  @media (min-width: 1024px) {
     h2 {
       font-size: 132px; } }
 
@@ -352,7 +354,7 @@ i {
 
 p, li {
   font-size: 32px; }
-  @media (min-width: 820px) {
+  @media (min-width: 1024px) {
     p, li {
       font-size: 40px; } }
 
@@ -392,7 +394,7 @@ ul {
   transition: all .25s ease;
   width: 150px;
   z-index: 1; }
-  @media (min-width: 820px) {
+  @media (min-width: 480px) {
     .nightmode-switch {
       height: 250px;
       width: 250px; } }
@@ -429,7 +431,11 @@ ul {
   font-weight: 700;
   margin: 0; }
 .index .intro {
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
+  @media (min-width: 720px) {
+    .index .intro {
+      text-align: left; } }
   .index .intro .right-container {
     align-self: unset; }
   .index .intro .avatar {
@@ -437,7 +443,7 @@ ul {
     margin: 0 auto;
     height: 150px;
     width: 150px; }
-    @media (min-width: 820px) {
+    @media (min-width: 480px) {
       .index .intro .avatar {
         height: 250px;
         width: 250px; } }
@@ -450,7 +456,7 @@ ul {
       transition: left .25s ease;
       width: 150px;
       z-index: 2; }
-      @media (min-width: 820px) {
+      @media (min-width: 480px) {
         .index .intro .avatar .img-wrapper {
           height: 250px;
           width: 250px; } }
@@ -502,6 +508,9 @@ ul {
   content: "What I do"; }
 .index .contact-title::after {
   content: "Contact"; }
+.index .contact .mail-link:hover,
+.index .contact .call-link:hover {
+  color: #268bd2; }
 
 .nightmode {
   background-color: #002b36; }
