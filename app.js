@@ -44,7 +44,7 @@
   function setTimer() {
     setTimeout(function(){
       checkForNightmode();
-    }, 3000);
+    }, 1000000);
   }
 
   checkForNightmode();
