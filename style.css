@@ -463,11 +463,11 @@ ul {
     .index .intro .avatar img {
       display: block;
       width: 100%; }
-    .index .intro .avatar:active, .index .intro .avatar:hover {
+    .index .intro .avatar:focus, .index .intro .avatar:active, .index .intro .avatar:hover {
       cursor: pointer; }
-      .index .intro .avatar:active .img-wrapper, .index .intro .avatar:hover .img-wrapper {
+      .index .intro .avatar:focus .img-wrapper, .index .intro .avatar:active .img-wrapper, .index .intro .avatar:hover .img-wrapper {
         left: -100px; }
-      .index .intro .avatar:active .nightmode-switch, .index .intro .avatar:hover .nightmode-switch {
+      .index .intro .avatar:focus .nightmode-switch, .index .intro .avatar:active .nightmode-switch, .index .intro .avatar:hover .nightmode-switch {
         left: 100px; }
 .index .intro-hi {
   position: relative;
