@@ -361,9 +361,11 @@ p, li {
 ul {
   margin: 0; }
   ul li {
-    margin-bottom: 8px; }
+    margin-bottom: 12px; }
 
 .hint {
+  display: inline-block;
+  margin-bottom: 12px;
   opacity: .2; }
 
 .red-text {

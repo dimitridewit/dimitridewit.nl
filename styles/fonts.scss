@@ -31,11 +31,13 @@ ul {
   margin: 0;
 
   li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 }
 
 .hint {
+  display: inline-block;
+  margin-bottom: 12px;
   opacity: .2;
 }
 
