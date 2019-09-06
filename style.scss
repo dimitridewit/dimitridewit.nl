@@ -1,0 +1,8 @@
+// sass --watch style.scss:style.css
+@import "styles/normalize";
+@import "styles/mixins/media-queries";
+@import "styles/vars";
+@import "styles/base";
+@import "styles/fonts";
+
+@import "styles/sections/index";
