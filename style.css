@@ -381,16 +381,6 @@ ul {
 .blue-text {
   color: #268bd2; }
 
-@keyframes bounce {
-  0% {
-    left: 4px;
-    top: 4px; }
-  50% {
-    left: 10px;
-    top: 10px; }
-  100% {
-    left: 4px;
-    top: 4px; } }
 .nightmode-switch {
   align-items: center;
   background-color: #eee8d5;
@@ -415,7 +405,7 @@ ul {
     height: 32px;
     left: 4px;
     position: relative;
-    transition: left .25s ease;
+    transition: left .15s ease;
     width: 32px;
     z-index: 5; }
   .nightmode-switch .switch {
@@ -436,9 +426,17 @@ ul {
     left: 44px; }
   .nightmode-switch.active .switch-fill {
     left: 46px; }
-  .nightmode-switch.bounce {
-    animation: bounce 1.5s infinite; }
 
+@keyframes bounce {
+  0% {
+    left: 4px;
+    top: 4px; }
+  50% {
+    left: 10px;
+    top: 10px; }
+  100% {
+    left: 4px;
+    top: 4px; } }
 .index h1, .index h2 {
   font-weight: 700;
   margin: 0; }
@@ -449,7 +447,11 @@ ul {
     .index .intro {
       text-align: left; } }
   .index .intro .right-container {
-    align-self: unset; }
+    align-self: unset;
+    padding: 0; }
+    @media (min-width: 1024px) {
+      .index .intro .right-container {
+        padding: 40px; } }
   .index .intro .avatar {
     position: relative;
     margin: 0 auto;
@@ -459,6 +461,16 @@ ul {
       .index .intro .avatar {
         height: 250px;
         width: 250px; } }
+    .index .intro .avatar .trigger {
+      animation: bounce 1.5s infinite;
+      background-color: #eee8d5;
+      display: none;
+      border-radius: 500px;
+      height: 100%;
+      position: absolute;
+      width: 100%; }
+      .index .intro .avatar .trigger.active {
+        display: block; }
     .index .intro .avatar .img-wrapper {
       border-radius: 500px;
       height: 150px;
@@ -485,24 +497,15 @@ ul {
   position: relative;
   display: block;
   z-index: 2; }
-  .index .intro-hi .hi::after {
+  .index .intro-hi::after {
     color: #eee8d5;
     content: "";
     left: 4px;
     position: absolute;
     top: 4px;
     z-index: -1;
-    content: "Hi! My name is"; }
-  .index .intro-hi .dimitri {
-    position: relative; }
-    .index .intro-hi .dimitri::after {
-      color: #eee8d5;
-      content: "";
-      left: 4px;
-      position: absolute;
-      top: 4px;
-      z-index: -1;
-      content: "Dimitri"; }
+    width: 100%;
+    content: "Hi! My name is Dimitri"; }
 .index .section-title {
   position: relative;
   display: block;
@@ -513,7 +516,8 @@ ul {
     left: 4px;
     position: absolute;
     top: 4px;
-    z-index: -1; }
+    z-index: -1;
+    width: 100%; }
 .index .me-title::after {
   content: "What I stand for"; }
 .index .skills-title::after {
@@ -533,8 +537,7 @@ ul {
     background-color: rgba(238, 232, 213, 0.1); }
   .nightmode section {
     color: #eee8d5; }
-  .nightmode .hi::after,
-  .nightmode .dimitri::after,
+  .nightmode .intro-hi::after,
   .nightmode .avatar::after,
   .nightmode .me-title::after,
   .nightmode .skills-title::after,

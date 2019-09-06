@@ -3,13 +3,12 @@
   var avatarNode = document.getElementById('avatar');
   var avatarImgNode = document.getElementById('avatar-img');
   var switchNode = document.getElementById('nightmode-switch');
+  var triggerNode = document.getElementById('switch-trigger');
   var switchClicked = false;
   var body = document.body;
 
   function removeBounce() {
-    if(switchNode.classList.contains('bounce')) {
-      switchNode.classList.remove('bounce');
-    }
+    triggerNode.classList.remove('active');
   }
 
   function toggleNightmode() {
