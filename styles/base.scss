@@ -5,14 +5,15 @@ html, body {
 
 * {
   box-sizing: inherit;
-  color: $black;
   font-family: 'Quicksand', sans-serif;
 }
 
 section {
+  transition: background-color .25s ease;
   margin: 0 auto;
   max-width: 1440px;
   padding: 10vh 24px;
+  color: $black;
 
   @include desktop {
     display: flex;

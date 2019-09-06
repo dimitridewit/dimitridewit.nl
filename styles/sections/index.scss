@@ -18,33 +18,49 @@
     .avatar {
       position: relative;
       margin: 0 auto;
-      width: 250px;
+      height: 150px;
+      width: 150px;
+
+      @include desktop {
+        height: 250px;
+        width: 250px;
+      }
 
       .img-wrapper {
         border-radius: 500px;
-        height: 250px;
+        height: 150px;
         overflow: hidden;
         position: relative;
-        width: 250px;
+        left: 0;
+        transition: left .25s ease;
+        width: 150px;
         z-index: 2;
+
+        @include desktop {
+          height: 250px;
+          width: 250px;
+        }
+
+
+
       }
+
 
       img {
         display: block;
         width: 100%;
       }
 
-      &::after {
-        background-color: $off-white;
-        border-radius: 500px;
-        content: "";
-        display: block;
-        height: 250px;
-        left: 4px;
-        position: absolute;
-        top: 4px;
-        width: 250px;
-        z-index: 1;
+      &.active,
+      &:hover {
+        cursor: pointer;
+        .img-wrapper {
+          left: -100px;
+        }
+
+        .nightmode-switch {
+          left: 100px;
+        }
       }
     }
   }

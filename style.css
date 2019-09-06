@@ -309,13 +309,14 @@ html, body {
 
 * {
   box-sizing: inherit;
-  color: #073642;
   font-family: 'Quicksand', sans-serif; }
 
 section {
+  transition: background-color .25s ease;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 10vh 24px; }
+  padding: 10vh 24px;
+  color: #073642; }
   @media (min-width: 820px) {
     section {
       display: flex;
@@ -377,6 +378,52 @@ ul {
 .blue-text {
   color: #268bd2; }
 
+.nightmode-switch {
+  transition: left .25s ease;
+  background-color: #eee8d5;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 150px;
+  z-index: 1; }
+  @media (min-width: 820px) {
+    .nightmode-switch {
+      height: 250px;
+      width: 250px; } }
+  .nightmode-switch .switch-fill {
+    transition: left .25s ease;
+    background-color: #eee8d5;
+    display: block;
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    border-radius: 80px;
+    position: relative;
+    z-index: 5; }
+  .nightmode-switch .switch {
+    display: flex;
+    background-color: #073642;
+    border: 4px solid #fdf6e3;
+    border-radius: 44px;
+    align-items: center;
+    height: 44px;
+    position: relative;
+    width: 88px;
+    z-index: 4; }
+    .nightmode-switch .switch:hover {
+      cursor: pointer; }
+      .nightmode-switch .switch:hover .switch-fill {
+        left: 6px; }
+  .nightmode-switch.active .switch:hover .switch-fill {
+    left: 44px; }
+  .nightmode-switch.active .switch-fill {
+    left: 46px; }
+
 .index h1, .index h2 {
   font-weight: 700;
   margin: 0; }
@@ -389,28 +436,34 @@ ul {
   .index .intro .avatar {
     position: relative;
     margin: 0 auto;
-    width: 250px; }
+    height: 150px;
+    width: 150px; }
+    @media (min-width: 820px) {
+      .index .intro .avatar {
+        height: 250px;
+        width: 250px; } }
     .index .intro .avatar .img-wrapper {
       border-radius: 500px;
-      height: 250px;
+      height: 150px;
       overflow: hidden;
       position: relative;
-      width: 250px;
+      left: 0;
+      transition: left .25s ease;
+      width: 150px;
       z-index: 2; }
+      @media (min-width: 820px) {
+        .index .intro .avatar .img-wrapper {
+          height: 250px;
+          width: 250px; } }
     .index .intro .avatar img {
       display: block;
       width: 100%; }
-    .index .intro .avatar::after {
-      background-color: #eee8d5;
-      border-radius: 500px;
-      content: "";
-      display: block;
-      height: 250px;
-      left: 4px;
-      position: absolute;
-      top: 4px;
-      width: 250px;
-      z-index: 1; }
+    .index .intro .avatar.active, .index .intro .avatar:hover {
+      cursor: pointer; }
+      .index .intro .avatar.active .img-wrapper, .index .intro .avatar:hover .img-wrapper {
+        left: -100px; }
+      .index .intro .avatar.active .nightmode-switch, .index .intro .avatar:hover .nightmode-switch {
+        left: 100px; }
 .index .intro-hi {
   position: relative;
   display: block;
@@ -450,5 +503,19 @@ ul {
   content: "What I do"; }
 .index .contact-title::after {
   content: "Contact"; }
+
+.nightmode h1,
+.nightmode h2 {
+  color: #eee8d5; }
+.nightmode section {
+  background-color: #002b36;
+  color: #eee8d5; }
+.nightmode .hi::after,
+.nightmode .dimitri::after,
+.nightmode .avatar::after,
+.nightmode .me-title::after,
+.nightmode .skills-title::after,
+.nightmode .contact-title::after {
+  opacity: .1; }
 
 /*# sourceMappingURL=style.css.map */
