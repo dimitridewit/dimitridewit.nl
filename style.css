@@ -365,23 +365,34 @@ ul {
 
 .hint {
   display: inline-block;
+  font-size: 16px;
   margin-bottom: 12px;
   opacity: .2; }
 
 .red-text {
   color: #dc322f; }
+  .red-text a {
+    color: #dc322f; }
 
 .orange-text {
   color: #cb4b16; }
+  .orange-text a {
+    color: #cb4b16; }
 
 .cyan-text {
   color: #2aa198; }
+  .cyan-text a {
+    color: #2aa198; }
 
 .green-text {
   color: #859900; }
+  .green-text a {
+    color: #859900; }
 
 .blue-text {
   color: #268bd2; }
+  .blue-text a {
+    color: #268bd2; }
 
 .nightmode-switch {
   align-items: center;
@@ -526,8 +537,7 @@ ul {
   content: "What I do"; }
 .index .contact-title::after {
   content: "Contact"; }
-.index .contact .mail-link:hover,
-.index .contact .call-link:hover {
+.index .contact a:hover {
   color: #268bd2; }
 
 .nightmode {
@@ -546,5 +556,7 @@ ul {
   .nightmode .skills-title::after,
   .nightmode .contact-title::after {
     opacity: .1; }
+  .nightmode .footer {
+    color: #eee8d5; }
 
 /*# sourceMappingURL=style.css.map */

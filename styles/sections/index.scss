@@ -145,8 +145,7 @@
   }
 
   .contact {
-    .mail-link,
-    .call-link {
+    a {
       &:hover {
         color: $blue;
       }

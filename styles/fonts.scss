@@ -37,26 +37,47 @@ ul {
 
 .hint {
   display: inline-block;
+  font-size: 16px;
   margin-bottom: 12px;
   opacity: .2;
 }
 
 .red-text {
   color: $red;
+
+  a {
+    color: $red;
+  }
 }
 
 .orange-text {
   color: $orange;
+
+  a {
+    color: $orange;
+  }
 }
 
 .cyan-text {
   color: $cyan;
+
+  a {
+    color: $cyan;
+  }
 }
 
 .green-text {
   color: $green;
+
+  a {
+    color: $green;
+  }
 }
 
 .blue-text {
   color: $blue;
+
+  a {
+    color: $blue;
+  }
 }
