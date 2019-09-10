@@ -145,9 +145,17 @@
   }
 
   .contact {
+    li {
+      font-size: 20px;
+
+      @include small-mobile {
+        font-size: 40px;
+      }
+    }
+
     a {
       &:hover {
-        color: $blue;
+        color: $black;
       }
     }
   }

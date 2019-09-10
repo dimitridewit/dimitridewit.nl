@@ -537,8 +537,13 @@ ul {
   content: "What I do"; }
 .index .contact-title::after {
   content: "Contact"; }
+.index .contact li {
+  font-size: 20px; }
+  @media (min-width: 480px) {
+    .index .contact li {
+      font-size: 40px; } }
 .index .contact a:hover {
-  color: #268bd2; }
+  color: #073642; }
 
 .nightmode {
   background-color: #002b36; }
